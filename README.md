@@ -45,7 +45,7 @@ Create Mysql Database using docker:
 _Note_: change MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USER and MYSQL_ROOT_PASSWORD.
 
 ```bash
-docker run --name whaticketdb -e MYSQL_ROOT_PASSWORD=strongpassword -e MYSQL_DATABASE=whaticket -e MYSQL_USER=whaticket -e MYSQL_PASSWORD=whaticket --restart always -p 3306:3306 -d mariadb:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+docker run --name whaticketdb -e MYSQL_ROOT_PASSWORD=whaticket123 -e MYSQL_DATABASE=whaticket -e MYSQL_USER=whaticket -e MYSQL_PASSWORD=whaticket --restart always -p 3306:3306 -d mariadb:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
 
 # Or run using `docker-compose` as below
 # Before copy .env.example to .env first and set the variables in the file.
@@ -84,11 +84,11 @@ FRONTEND_URL=https://localhost:3000
 PROXY_PORT=8080
 PORT=8080
 
-DB_HOST=                  #DB host IP, usually localhost
+DB_HOST=localhost                  #DB host IP, usually localhost
 DB_DIALECT=
-DB_USER=
-DB_PASS=
-DB_NAME=
+DB_USER=whaticket
+DB_PASS=whaticket123
+DB_NAME=whaticketdb
 
 JWT_SECRET=3123123213123
 JWT_REFRESH_SECRET=75756756756
